@@ -17,9 +17,9 @@ public static class GenericAdapter
 
                 converted.Add((T)Convert.ChangeType(value, typeof(T)));
             }
-            else if (typeof(T) == typeof(AccountCreationDto))
+            else if (typeof(T) == typeof(AccountForCreationDto))
             {
-                var value = new AccountCreationDto 
+                var value = new AccountForCreationDto 
                 {
                     Id = converter.Id,
                     DateCreated = converter.DateCreated,
@@ -34,7 +34,7 @@ public static class GenericAdapter
         return converted;
     }
 
-    public static IEnumerable<T> Adapt<T>(this IEnumerable<AccountCreationDto> converters)
+    public static IEnumerable<T> Adapt<T>(this IEnumerable<AccountForCreationDto> converters)
     {
         List<T> converted = new List<T>(converters.Count());
 

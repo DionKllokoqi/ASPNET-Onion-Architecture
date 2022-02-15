@@ -1,4 +1,4 @@
-public class AccountCreationDto
+public class AccountForCreationDto
 {
     #region Public Properties
 
